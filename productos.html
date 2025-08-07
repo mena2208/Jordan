@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos | Jordan</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background: #000;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    .productos {
+      padding: 3rem 2rem;
+    }
+
+    .productos h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .producto {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .producto img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .producto h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .producto p {
+      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .producto button {
+      background: #000;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .producto button:hover {
+      background: red;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #000;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <h1>Jordan</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- PRODUCTOS -->
+  <section class="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos-grid">
+      
+      <!-- Producto 1 -->
+      <div class="producto">
+        <img src="https://static.nike.com/a/images/t_default/3f43c79f-fddb-41e2-902f-010ed3f61e52/air-jordan-1-mid-zapatillas-xMgL45.png" alt="Air Jordan 1 Mid">
+        <h3>Air Jordan 1 Mid</h3>
+        <p>$150</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto">
+        <img src="https://static.nike.com/a/images/t_default/b7d7d9d2-1c4d-47e6-bcae-599e3780d56b/air-jordan-4-retro-zapatillas.png" alt="Air Jordan 4 Retro">
+        <h3>Air Jordan 4 Retro</h3>
+        <p>$220</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto">
+        <img src="https://static.nike.com/a/images/t_default/bcd01394-89a6-4e5d-8220-c1b2dc73cb5f/air-jordan-11-retro-zapatillas-5jvM0W.png" alt="Air Jordan 11 Retro">
+        <h3>Air Jordan 11 Retro</h3>
+        <p>$250</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto">
+        <img src="https://m.media-amazon.com/images/I/81LZbka9kWL._AC_SY695_.jpg" alt="Jordan 1 Low">
+        <h3>Air Jordan 1 Low</h3>
+        <p>$130</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Marca Jordan. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
