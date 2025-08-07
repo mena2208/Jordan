@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jordan | Sitio Oficial</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* NAVBAR */
+    header {
+      background: #000;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: red;
+    }
+
+    /* CARRUSEL */
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+    .carousel img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .carousel img.active {
+      opacity: 1;
+    }
+
+    /* INFO MARCA */
+    .info {
+      padding: 3rem 2rem;
+      background-color: #f4f4f4;
+    }
+    .info h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .info-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .info-text {
+      flex: 1 1 400px;
+    }
+    .info-images {
+      flex: 1 1 400px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .info-images img {
+      width: 48%;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #000;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <h1>Jordan</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- CARRUSEL -->
+  <section class="carousel" id="inicio">
+    <img src="https://static.nike.com/a/images/w_1280,q_auto,f_auto/a772e328-aeab-44e0-9518-32d8778c860d/fecha-de-lanzamiento-del-air-jordan-11-varsity-red-ct8012-116.jpg" class="active">
+    <img src="https://www.basketballemotion.com/imagesarticulos/227615/grandes/zapatilla-jordan-air-jordan1-retro-high-og-mujer-negro-0.webp">
+    <img src="https://static.nike.com/a/images/w_1280,q_auto,f_auto/9114dec2-8e26-4747-afda-6a7cf0c77c97/fecha-de-lanzamiento-del-air-jordan-4-white-and-black-dh6927-111.jpg">
+    <img src="https://media.gq.com.mx/photos/675c61077e1c6b2d46609421/16:9/w_2560%2Cc_limit/Air_Jordan_1_Low_Chicago.jpg">
+    <img src="https://images.stockx.com/360/Air-Jordan-1-Mid-Patent-Black-White-Gold/Images/Air-Jordan-1-Mid-Patent-Black-White-Gold/Lv2/img01.jpg?w=480&q=60&dpr=1&updated_at=1635256232&h=320">
+  </section>
+
+  <!-- INFO MARCA -->
+  <section class="info">
+    <h2>Sobre la Marca Jordan</h2>
+    <div class="info-content">
+      <div class="info-text">
+        <p>La marca Jordan nació en 1984 cuando Nike firmó con el legendario jugador de baloncesto Michael Jordan. Desde entonces, se ha convertido en un símbolo de excelencia, estilo y cultura urbana.</p>
+        <p>Las zapatillas Jordan son reconocidas mundialmente no solo por su diseño innovador, sino también por su influencia en la moda y el deporte. Modelos icónicos como las Jordan 1, Jordan 3 y Jordan 11 son esenciales en cualquier colección de sneakers.</p>
+      </div>
+      <div class="info-images">
+        <img src="https://m.media-amazon.com/images/I/71By5phy0xL._AC_SL1500_.jpg">
+        <img src="https://onsize.eu/cdn/shop/files/METALLICGOLD.webp?v=1738858593">
+        
+    
+        <img src="https://media.finishline.com/i/finishline/FQ8138_103_P1?$default$&w=671&&h=671&bg=rgb(237,237,237)">
+        <img src="https://cms-cdn.thesolesupplier.co.uk/2020/03/DiorJordan3_native_1600-2.jpg.webp">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Marca Jordan. Todos los derechos reservados.
+  </footer>
+
+  <!-- JS PARA CARRUSEL -->
+  <script>
+    const images = document.querySelectorAll('.carousel img');
+    let index = 0;
+
+    setInterval(() => {
+      images[index].classList.remove('active');
+      index = (index + 1) % images.length;
+      images[index].classList.add('active');
+    }, 30000); // 30 segundos
+  </script>
+
+</body>
+</html>
